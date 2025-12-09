@@ -1,7 +1,6 @@
 module Main (main) where 
 
 import qualified Data.List.Split as LS (splitOn)
-import Debug.Trace (trace)
 
 
 parse = map ( (\(a:b:xs) -> (a, b)) . map (read :: String -> Int) . LS.splitOn "-") . LS.splitOn ","
